@@ -17,8 +17,8 @@ public class CreditCardInformationController {
     private final CreditCardInformationServices creditCardInformationServices;
 
     @GetMapping
-    String getcreditCardInformationServices(@RequestParam("id") String id) {
-        return creditCardInformationServices.getcreditCardInformationServices(id);
+    String getCreditCardInformationServices(@RequestParam("id") String id) {
+        return creditCardInformationServices.getCreditCardInformationServices(id);
     }
 
 

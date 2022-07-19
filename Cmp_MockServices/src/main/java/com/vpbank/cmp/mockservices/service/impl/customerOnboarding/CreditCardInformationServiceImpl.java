@@ -6,7 +6,7 @@ import org.springframework.stereotype.Service;
 @Service
 public class CreditCardInformationServiceImpl implements CreditCardInformationServices {
     @Override
-    public String getcreditCardInformationServices(String id) {
+    public String getCreditCardInformationServices(String id) {
         return "{\n" +
                 "    \"cardList\": {\n" +
                 "        \"card\": {\n" +
