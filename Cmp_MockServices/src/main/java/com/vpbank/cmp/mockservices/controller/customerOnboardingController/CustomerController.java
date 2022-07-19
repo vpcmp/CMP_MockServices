@@ -2,7 +2,7 @@
 
 package com.vpbank.cmp.mockservices.controller.customerOnboardingController;
 
-import com.vpbank.cmp.mockservices.service.CustomerService;
+import com.vpbank.cmp.mockservices.service.customerOnboardingServices.CustomerService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;

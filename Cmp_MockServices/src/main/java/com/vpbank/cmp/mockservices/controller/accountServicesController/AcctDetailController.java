@@ -1,7 +1,7 @@
 //Account Summary Interface
 package com.vpbank.cmp.mockservices.controller.accountServicesController;
 
-import com.vpbank.cmp.mockservices.service.AcctDetailServices;
+import com.vpbank.cmp.mockservices.service.accountServices.AcctDetailServices;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
