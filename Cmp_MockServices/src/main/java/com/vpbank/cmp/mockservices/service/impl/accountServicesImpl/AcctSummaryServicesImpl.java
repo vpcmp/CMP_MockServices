@@ -1,7 +1,7 @@
-package com.vpbank.cmp.mockservices.service.impl;
+package com.vpbank.cmp.mockservices.service.impl.accountServicesImpl;
 
 
-import com.vpbank.cmp.mockservices.service.AcctSummaryServices;
+import com.vpbank.cmp.mockservices.service.accountServices.AcctSummaryServices;
 import org.springframework.stereotype.Service;
 
 

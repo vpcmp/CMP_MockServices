@@ -1,4 +1,4 @@
-package com.vpbank.cmp.mockservices.service;
+package com.vpbank.cmp.mockservices.service.accountServices;
 
 public interface AcctSummaryServices {
     String getAcctSummaryServices(String cif);

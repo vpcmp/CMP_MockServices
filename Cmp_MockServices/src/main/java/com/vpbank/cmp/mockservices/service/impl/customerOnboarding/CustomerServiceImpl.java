@@ -1,7 +1,6 @@
-package com.vpbank.cmp.mockservices.service.impl;
+package com.vpbank.cmp.mockservices.service.impl.customerOnboarding;
 
-import com.vpbank.cmp.mockservices.domain.CustomerInfo;
-import com.vpbank.cmp.mockservices.service.CustomerService;
+import com.vpbank.cmp.mockservices.service.customerOnboardingServices.CustomerService;
 import org.springframework.stereotype.Service;
 
 @Service

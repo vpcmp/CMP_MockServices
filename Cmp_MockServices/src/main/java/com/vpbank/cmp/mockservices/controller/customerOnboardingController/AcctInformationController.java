@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
-import com.vpbank.cmp.mockservices.service.AcctInformationServices;
+import com.vpbank.cmp.mockservices.service.customerOnboardingServices.AcctInformationServices;
 
 @RestController
 @RequestMapping(path="/cas/cashs/1.0/products")
@@ -16,8 +16,10 @@ public class AcctInformationController {
     private final AcctInformationServices acctInformationServices;
 
     @GetMapping
-    String getAcctInformationService(@RequestParam("cif") String cif) {
-        return acctInformationServices.getAcctInformationService(cif);
+    String getAcctInformationService(
+            @RequestParam("cif") String cif,
+            @RequestParam(value = "types", required = false) String types) {
+        return acctInformationServices.getAcctInformationService(cif,types);
     }
 
 }

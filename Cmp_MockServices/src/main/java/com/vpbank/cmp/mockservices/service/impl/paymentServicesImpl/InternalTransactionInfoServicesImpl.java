@@ -1,60 +1,60 @@
-package com.vpbank.cmp.mockservices.service.impl;
+package com.vpbank.cmp.mockservices.service.impl.paymentServicesImpl;
 
-import com.vpbank.cmp.mockservices.service.AcctDetailServices;
+import com.vpbank.cmp.mockservices.service.paymentServices.InternalTransactionInfoServices;
 import org.springframework.stereotype.Service;
 
 
 @Service
-public class AcctDetailServicesImpl implements AcctDetailServices {
+public class InternalTransactionInfoServicesImpl implements InternalTransactionInfoServices {
     @Override
-    public String getAcctDetailServices(String cif) {
+    public String getInternalTransactionInfoServices(String id) {
         return "{\n" +
-                "    \"customerNumber\": \"6605786\",\n" +
+                "    \"customerNumber\": \"76829\",\n" +
                 "    \"accountDetails\": {\n" +
-                "        \"accountNumber\": \"230095639\",\n" +
+                "        \"accountNumber\": \"168769\",\n" +
                 "        \"currency\": \"VND\",\n" +
                 "        \"category\": \"1001\",\n" +
                 "        \"categoryName\": \"DEM DEPO\",\n" +
-                "        \"accountOfficer\": \"356\",\n" +
+                "        \"accountOfficer\": \"133\",\n" +
                 "        \"accountStatus\": \"ACTIVE\",\n" +
-                "        \"accountStatusDate\": \"\",\n" +
+                "        \"accountStatusDate\": \"2021-08-05\",\n" +
                 "        \"bonusType\": \"\",\n" +
                 "        \"jointHolder\": \"\",\n" +
                 "        \"accountType\": \"AC\",\n" +
-                "        \"accountName\": \"VPBANK-230095639 CATEG1001\",\n" +
-                "        \"branchName\": \"VPBANK DAK LAK\",\n" +
-                "        \"branchCode\": \"VN0010356\",\n" +
-                "        \"workingBalance\": \"9997519028\",\n" +
-                "        \"availableBalance\": \"9997519028\",\n" +
-                "        \"openActualBalance\": \"9997819028\",\n" +
-                "        \"averageBalancePerMonth\": \"9030028705\",\n" +
+                "        \"accountName\": \"HAI NGUYEN THI THU GB.1\",\n" +
+                "        \"branchName\": \"SO GIAO DICH\",\n" +
+                "        \"branchCode\": \"VN0010133\",\n" +
+                "        \"workingBalance\": \"11720450702\",\n" +
+                "        \"availableBalance\": \"11720450702\",\n" +
+                "        \"openActualBalance\": \"11720450702\",\n" +
+                "        \"averageBalancePerMonth\": \"11720507528\",\n" +
                 "        \"lockedAmount\": \"0\",\n" +
                 "        \"relationCode\": \"\",\n" +
                 "        \"relationNote\": \"\",\n" +
                 "        \"payrollType\": \"\",\n" +
                 "        \"payrollDate\": \"\",\n" +
-                "        \"alternateID1\": \"\",\n" +
+                "        \"alternateID1\": \"B2K1383740\",\n" +
                 "        \"alternateID4\": \"\",\n" +
-                "        \"currNumber\": \"4\",\n" +
-                "        \"inputter\": \"HUYENDTT20\",\n" +
-                "        \"dateTime\": \"2022-04-26T16:57:56.885288+07:00\",\n" +
-                "        \"authoriser\": \"HUYENDTT20\",\n" +
-                "        \"vpbLnkPartner\": \"1-NONE\",\n" +
+                "        \"currNumber\": \"18\",\n" +
+                "        \"inputter\": \"DIUPT03\",\n" +
+                "        \"dateTime\": \"2022-03-09T15:24:27.901228+07:00\",\n" +
+                "        \"authoriser\": \"DIUPT03\",\n" +
+                "        \"vpbLnkPartner\": \"\",\n" +
                 "        \"departmentCode\": \"17\",\n" +
                 "        \"overrides\": \"\",\n" +
                 "        \"postingRestrict\": \"\",\n" +
                 "        \"postingRestrictDes\": \"\",\n" +
-                "        \"dao\": \"24818\",\n" +
+                "        \"dao\": \"\",\n" +
                 "        \"branchStatus\": \"OPEN\",\n" +
                 "        \"channelCredit\": \"\",\n" +
                 "        \"inputChannel\": \"\",\n" +
                 "        \"authorChannel\": \"\",\n" +
-                "        \"custType\": \"144\",\n" +
+                "        \"custType\": \"12\",\n" +
                 "        \"relatedAccount\": \"\",\n" +
                 "        \"accountToCredit\": \"\",\n" +
                 "        \"overdraftType\": \"\",\n" +
                 "        \"limitExpireDate\": \"\",\n" +
-                "        \"vpbService\": \"\",\n" +
+                "        \"vpbService\": \"Payroll\",\n" +
                 "        \"serviceChannel\": \"\",\n" +
                 "        \"odInterestRate\": \"\",\n" +
                 "        \"vitualAltAcccount\": \"\",\n" +
@@ -62,11 +62,11 @@ public class AcctDetailServicesImpl implements AcctDetailServices {
                 "        \"nickName\": \"\",\n" +
                 "        \"vanMaster\": \"\",\n" +
                 "        \"limStartDate\": \"\",\n" +
-                "        \"openDate\": \"2020-12-15\",\n" +
+                "        \"openDate\": \"2006-10-02\",\n" +
                 "        \"limitAmount\": \"\",\n" +
                 "        \"currNoChannel\": \"\",\n" +
                 "        \"regDateTime\": \"\",\n" +
-                "        \"onlineActualBalance\": \"9997519028\",\n" +
+                "        \"onlineActualBalance\": \"11720450702\",\n" +
                 "        \"vanBatchMaster\": \"\"\n" +
                 "    }\n" +
                 "}";

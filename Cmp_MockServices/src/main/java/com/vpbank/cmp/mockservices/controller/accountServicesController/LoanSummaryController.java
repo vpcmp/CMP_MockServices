@@ -1,7 +1,6 @@
-//Account Summary Interface
 package com.vpbank.cmp.mockservices.controller.accountServicesController;
 
-import com.vpbank.cmp.mockservices.service.accountServices.AcctSummaryServices;
+import com.vpbank.cmp.mockservices.service.accountServices.LoanSummaryServices;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -9,15 +8,16 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping(path="/cas/cashs/1.0/accounts/ca/list")
+@RequestMapping(path="/cas/cashs/1.0/accounts/ld/list")
 @RequiredArgsConstructor
-public class AcctSummaryController {
 
-    private final AcctSummaryServices acctSummaryServices;
+public class LoanSummaryController {
+
+    private final LoanSummaryServices loanSummaryServices;
 
     @GetMapping
-    String getAcctSummaryServices(@RequestParam("cif") String cif) {
-        return acctSummaryServices.getAcctSummaryServices(cif);
+    String getLoanSummaryServices(@RequestParam("cif") String cif) {
+        return loanSummaryServices.getLoanSummaryServices(cif);
     }
 
 }

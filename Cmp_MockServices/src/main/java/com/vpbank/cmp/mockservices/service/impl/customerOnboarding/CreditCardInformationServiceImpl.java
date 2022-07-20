@@ -1,12 +1,12 @@
-package com.vpbank.cmp.mockservices.service.impl;
+package com.vpbank.cmp.mockservices.service.impl.customerOnboarding;
 
-import com.vpbank.cmp.mockservices.service.CreditCardInformationServices;
+import com.vpbank.cmp.mockservices.service.customerOnboardingServices.CreditCardInformationServices;
 import org.springframework.stereotype.Service;
 
 @Service
 public class CreditCardInformationServiceImpl implements CreditCardInformationServices {
     @Override
-    public String getcreditCardInformationServices(String id) {
+    public String getCreditCardInformationServices(String id) {
         return "{\n" +
                 "    \"cardList\": {\n" +
                 "        \"card\": {\n" +
