@@ -16,7 +16,8 @@ public class InternalTransactionInfoController {
     private final InternalTransactionInfoServices internalTransactionInfoServices;
 
     @GetMapping
-    String getInternalTransactionInfoServices(@RequestParam("id") String id) {
+    String getInternalTransactionInfoServices(@RequestParam("id") String id) throws InterruptedException {
+        Thread.sleep((long)(Math.random() * 10000));
         return internalTransactionInfoServices.getInternalTransactionInfoServices(id);
     }
 

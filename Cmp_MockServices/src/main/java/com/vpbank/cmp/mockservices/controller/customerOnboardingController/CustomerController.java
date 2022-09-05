@@ -17,7 +17,8 @@ public class CustomerController {
     private final CustomerService customerService;
 
     @GetMapping
-    String getCustomerInfo(@RequestParam("cif") String cif) {
+    String getCustomerInfo(@RequestParam("cif") String cif) throws InterruptedException {
+        Thread.sleep((long)(Math.random() * 10000));
         return customerService.getCustomerInfo(cif);
     }
 }

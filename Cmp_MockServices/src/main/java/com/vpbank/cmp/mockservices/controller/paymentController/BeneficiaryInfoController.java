@@ -16,7 +16,8 @@ public class BeneficiaryInfoController {
     private final BeneficiaryInfoServices beneficiaryInfoServices;
 
     @GetMapping
-    String getBeneficiaryInfoServices(@RequestParam("benType") String benType) {
+    String getBeneficiaryInfoServices(@RequestParam("benType") String benType) throws InterruptedException {
+        Thread.sleep((long)(Math.random() * 10000));
         return beneficiaryInfoServices.getBeneficiaryInfoServices(benType);
     }
 

@@ -15,7 +15,8 @@ public class DepositDetailController {
     private final DepositDetailServices depositDetailServices;
 
     @GetMapping
-    String getDepositDetailServices(@RequestParam("id") String id){
+    String getDepositDetailServices(@RequestParam("id") String id) throws InterruptedException {
+        Thread.sleep((long)(Math.random() * 10000));
         return depositDetailServices.getDepositDetailServices(id);
     }
 }

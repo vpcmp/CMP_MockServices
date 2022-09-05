@@ -1,4 +1,3 @@
-//Account Summary Interface
 package com.vpbank.cmp.mockservices.controller.accountServicesController;
 
 import com.vpbank.cmp.mockservices.service.accountServices.AcctSummaryServices;
@@ -16,7 +15,8 @@ public class AcctSummaryController {
     private final AcctSummaryServices acctSummaryServices;
 
     @GetMapping
-    String getAcctSummaryServices(@RequestParam("cif") String cif) {
+    String getAcctSummaryServices(@RequestParam("cif") String cif) throws InterruptedException {
+        Thread.sleep((long)(Math.random() * 10000));
         return acctSummaryServices.getAcctSummaryServices(cif);
     }
 

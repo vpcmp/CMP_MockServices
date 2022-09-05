@@ -15,7 +15,8 @@ public class CreditAdviceController {
     private final CreditAdviceServices creditAdviceServices;
 
     @GetMapping
-    String getCreditAdviceServices(@RequestParam("id") String id) {
+    String getCreditAdviceServices(@RequestParam("id") String id) throws InterruptedException {
+        Thread.sleep((long)(Math.random() * 10000));
         return creditAdviceServices.getCreditAdviceServices(id);
     }
 }

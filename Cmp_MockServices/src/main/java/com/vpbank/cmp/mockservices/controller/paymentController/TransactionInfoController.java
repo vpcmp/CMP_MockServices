@@ -17,7 +17,8 @@ public class TransactionInfoController {
 
     @GetMapping
     String getTransactionInfoServices(@RequestParam("debitAccount") String debAcc,
-                                      @RequestParam("refNo") String refNo) {
+                                      @RequestParam("refNo") String refNo) throws InterruptedException {
+        Thread.sleep((long)(Math.random() * 10000));
         return transactionInfoServices.getTransactionInfoServices(debAcc, refNo);
     }
 

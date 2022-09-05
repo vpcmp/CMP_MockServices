@@ -16,7 +16,8 @@ public class DepositSummaryController {
     @GetMapping
     String getDepositSummaryServices(
             @RequestParam(value = "cif", required = true) String cif,
-            @RequestParam(value = "types", required = true) String types) {
+            @RequestParam(value = "types", required = true) String types) throws  InterruptedException{
+        Thread.sleep((long)(Math.random() * 10000));
         return depositSummaryServices.getDepositSummaryServices(cif, types);
     }
 }

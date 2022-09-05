@@ -1,4 +1,3 @@
-//Account Summary Interface
 package com.vpbank.cmp.mockservices.controller.accountServicesController;
 
 import com.vpbank.cmp.mockservices.service.accountServices.AcctDetailServices;
@@ -9,15 +8,21 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping(path="/cas/cashs/1.0/accounts/ca")
+@RequestMapping(path="/cas/cashs/1.0/accounts")
 @RequiredArgsConstructor
 public class AcctDetailController {
 
     private final AcctDetailServices acctDetailServices;
 
-    @GetMapping
-    String getAcctDetailServices(@RequestParam("id") String id) {
+    @GetMapping("/ca")
+    String getAcctDetailServices(@RequestParam("id") String id) throws InterruptedException {
+        Thread.sleep((long)(Math.random() * 10000));
         return acctDetailServices.getAcctDetailServices(id);
     }
+    @GetMapping("/balance")
+    String getAccountBalances(@RequestParam("id") String id) throws InterruptedException {
+        Thread.sleep((long)(Math.random() * 10000));
+        return acctDetailServices.getAccountBalances(id);
 
+    }
 }

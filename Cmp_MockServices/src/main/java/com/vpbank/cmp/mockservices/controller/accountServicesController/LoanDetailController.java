@@ -15,7 +15,8 @@ public class LoanDetailController {
     private final LoanDetailServices loanDetailServices;
 
     @GetMapping
-    String getLoanDetailServices(@RequestParam("id") String id) {
+    String getLoanDetailServices(@RequestParam("id") String id) throws InterruptedException {
+        Thread.sleep((long)(Math.random() * 10000));
         return loanDetailServices.getLoanDetailServices(id);
     }
 }

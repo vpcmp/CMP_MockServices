@@ -15,7 +15,8 @@ public class DepositDetailESAController {
     private final DepositDetailESAServices depositDetailESAServices;
 
     @GetMapping
-    String getDepositDetailESAServices(@RequestParam("id") String id){
+    String getDepositDetailESAServices(@RequestParam("id") String id) throws InterruptedException {
+        Thread.sleep((long)(Math.random() * 10000));
         return depositDetailESAServices.getDepositDetailESAServices(id);
     }
 }

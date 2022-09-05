@@ -18,7 +18,8 @@ public class AcctInformationController {
     @GetMapping
     String getAcctInformationService(
             @RequestParam("cif") String cif,
-            @RequestParam(value = "types", required = false) String types) {
+            @RequestParam(value = "types", required = false) String types) throws InterruptedException {
+        Thread.sleep((long)(Math.random() * 10000));
         return acctInformationServices.getAcctInformationService(cif,types);
     }
 

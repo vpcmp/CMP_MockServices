@@ -16,7 +16,8 @@ public class LoanSummaryController {
     private final LoanSummaryServices loanSummaryServices;
 
     @GetMapping
-    String getLoanSummaryServices(@RequestParam("cif") String cif) {
+    String getLoanSummaryServices(@RequestParam("cif") String cif) throws InterruptedException {
+        Thread.sleep((long)(Math.random() * 10000));
         return loanSummaryServices.getLoanSummaryServices(cif);
     }
 
