@@ -18,7 +18,7 @@ public class CreditCardInformationController {
 
     @GetMapping
     String getCreditCardInformationServices(@RequestParam("id") String id) throws InterruptedException {
-        Thread.sleep((long)(Math.random() * 10000));
+        Thread.sleep((long)(Math.random() * 5000));
         return creditCardInformationServices.getCreditCardInformationServices(id);
     }
 

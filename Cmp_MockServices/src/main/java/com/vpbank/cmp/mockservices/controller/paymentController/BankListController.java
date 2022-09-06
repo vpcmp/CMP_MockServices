@@ -17,7 +17,7 @@ public class BankListController {
 
     @GetMapping
     String getBranchListServices() throws InterruptedException {
-        Thread.sleep((long)(Math.random() * 10000));
+        Thread.sleep((long)(Math.random() * 5000));
         return bankListServices.getBankListServices();
     }
 

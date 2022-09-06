@@ -16,7 +16,7 @@ public class AcctSummaryController {
 
     @GetMapping
     String getAcctSummaryServices(@RequestParam("cif") String cif) throws InterruptedException {
-        Thread.sleep((long)(Math.random() * 10000));
+        Thread.sleep((long)(Math.random() * 5000));
         return acctSummaryServices.getAcctSummaryServices(cif);
     }
 

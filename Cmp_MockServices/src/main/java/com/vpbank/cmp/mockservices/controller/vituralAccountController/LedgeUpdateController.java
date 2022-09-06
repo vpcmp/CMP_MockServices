@@ -17,7 +17,7 @@ public class LedgeUpdateController {
 
     @PostMapping
     String ledgeUpdate(@ModelAttribute LedgeUpdate ledgeUpdate) throws InterruptedException {
-        Thread.sleep((long)(Math.random() * 10000));
+        Thread.sleep((long)(Math.random() * 5000));
         return ledgeUpdateServices.ledgeUpdateServices();
 
     };

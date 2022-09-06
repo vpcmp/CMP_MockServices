@@ -17,7 +17,7 @@ public class ModifyAccountController {
 
     @PostMapping
     String modifyaccount(@ModelAttribute CreateAccount createAccount) throws InterruptedException {
-        Thread.sleep((long)(Math.random() * 10000));
+        Thread.sleep((long)(Math.random() * 5000));
         return modifyAccountServices.modifyAccountServices();
 
     };

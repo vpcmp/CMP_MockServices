@@ -16,7 +16,7 @@ public class NotifyEODController {
 
     @PostMapping
     String acctPosting(@ModelAttribute NotifyEOD NotifyEOD) throws InterruptedException {
-        Thread.sleep((long)(Math.random() * 10000));
+        Thread.sleep((long)(Math.random() * 5000));
         return notifyEODServices.notifyEODServices();
 
     };

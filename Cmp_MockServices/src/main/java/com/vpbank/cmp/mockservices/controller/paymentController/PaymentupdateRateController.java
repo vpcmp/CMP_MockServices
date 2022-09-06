@@ -1,4 +1,3 @@
-//Account Summary Interface
 package com.vpbank.cmp.mockservices.controller.paymentController;
 
 import com.vpbank.cmp.mockservices.model.PaymentupdateRate;
@@ -18,7 +17,7 @@ public class PaymentupdateRateController {
 
     @PostMapping
     String getpaymentupdateRate(@ModelAttribute PaymentupdateRate paymentupdateRate) throws InterruptedException {
-        Thread.sleep((long)(Math.random() * 10000));
+        Thread.sleep((long)(Math.random() * 5000));
         return getpaymentupdateRateServices.getpaymentupdateRateServices();
 
     };

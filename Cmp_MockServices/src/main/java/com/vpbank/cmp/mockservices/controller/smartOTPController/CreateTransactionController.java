@@ -1,10 +1,7 @@
-//Account Summary Interface
 package com.vpbank.cmp.mockservices.controller.smartOTPController;
 
 import com.vpbank.cmp.mockservices.model.CreateTransaction;
-import com.vpbank.cmp.mockservices.model.SmartOTPgetActivationCode;
 import com.vpbank.cmp.mockservices.service.smartOTPServices.CreateTransactionServices;
-import com.vpbank.cmp.mockservices.service.smartOTPServices.SmartOTPgetActivationCodeServices;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -20,7 +17,7 @@ public class CreateTransactionController {
 
     @PostMapping
     String getcreateTransaction(@ModelAttribute CreateTransaction createTransaction) throws InterruptedException {
-        Thread.sleep((long)(Math.random() * 10000));
+        Thread.sleep((long)(Math.random() * 5000));
         return createTransactionServices.createTransactionServices();
 
     };

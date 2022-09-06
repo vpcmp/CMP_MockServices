@@ -1,4 +1,3 @@
-//Account Summary Interface
 package com.vpbank.cmp.mockservices.controller.smartOTPController;
 
 import com.vpbank.cmp.mockservices.model.SmartOTPgetActivationCode;
@@ -18,7 +17,7 @@ public class SmartOTPgetActivationCodeController {
 
     @PostMapping
     String getsmartOTPgetActivationCode(@ModelAttribute SmartOTPgetActivationCode smartOTPgetActivationCode) throws InterruptedException {
-        Thread.sleep((long)(Math.random() * 10000));
+        Thread.sleep((long)(Math.random() * 5000));
         return getsmartOTPgetActivationCodeServices.getsmartOTPgetActivationCodeServices();
 
     };

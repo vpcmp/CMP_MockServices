@@ -19,7 +19,7 @@ public class MaintainceAccountController {
 
     @PostMapping
     String maintainceaccount(@ModelAttribute MaintainceAccount maintainceAccount) throws InterruptedException {
-        Thread.sleep((long)(Math.random() * 10000));
+        Thread.sleep((long)(Math.random() * 5000));
         return maintainceAccountServices.maintainceAccountServices();
 
     };

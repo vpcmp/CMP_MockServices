@@ -17,7 +17,7 @@ public class InternalTransactionInfoController {
 
     @GetMapping
     String getInternalTransactionInfoServices(@RequestParam("id") String id) throws InterruptedException {
-        Thread.sleep((long)(Math.random() * 10000));
+        Thread.sleep((long)(Math.random() * 5000));
         return internalTransactionInfoServices.getInternalTransactionInfoServices(id);
     }
 

@@ -14,7 +14,7 @@ public class CreateAccountController {
 
     @PostMapping
     String createaccount(@ModelAttribute CreateAccount createAccount) throws InterruptedException {
-        Thread.sleep((long)(Math.random() * 10000));
+        Thread.sleep((long)(Math.random() * 5000));
         return createAccountServices.createAccountServices();
 
     };

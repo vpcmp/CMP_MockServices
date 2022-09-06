@@ -3,7 +3,6 @@ package com.vpbank.cmp.mockservices.controller.vituralAccountController;
 import com.vpbank.cmp.mockservices.model.ClosureAccount;
 import com.vpbank.cmp.mockservices.model.CreateAccount;
 import com.vpbank.cmp.mockservices.service.vituralAccountServices.ClosureAccountServices;
-import com.vpbank.cmp.mockservices.service.vituralAccountServices.ModifyAccountServices;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -19,7 +18,7 @@ public class ClosureAccountController {
 
     @PostMapping
     String closureaccount(@ModelAttribute ClosureAccount closureAccount) throws InterruptedException {
-        Thread.sleep((long)(Math.random() * 10000));
+        Thread.sleep((long)(Math.random() * 5000));
         return closureAccountServices.closureAccountServices();
 
     }

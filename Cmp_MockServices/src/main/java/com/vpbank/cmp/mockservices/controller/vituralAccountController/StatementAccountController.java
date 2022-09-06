@@ -19,7 +19,7 @@ public class StatementAccountController {
 
     @PostMapping
     String statementaccount(@ModelAttribute StatementAccount statementAccount) throws InterruptedException {
-        Thread.sleep((long)(Math.random() * 10000));
+        Thread.sleep((long)(Math.random() * 5000));
         return statementAccountServices.statementAccountServices();
 
     };

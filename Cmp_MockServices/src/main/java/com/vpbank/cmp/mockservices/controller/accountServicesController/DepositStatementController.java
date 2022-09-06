@@ -20,7 +20,7 @@ public class DepositStatementController {
             @RequestParam(value = "type", required = false) String type,
             @RequestParam(value = "frdate", required = false) String fDate,
             @RequestParam(value = "todate", required = false) String toDate) throws InterruptedException {
-        Thread.sleep((long)(Math.random() * 10000));
+        Thread.sleep((long)(Math.random() * 5000));
         return depositStatementServices.getDepositStatementServices(id,type,fDate,toDate);
     }
 }

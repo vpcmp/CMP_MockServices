@@ -16,12 +16,12 @@ public class AcctDetailController {
 
     @GetMapping("/ca")
     String getAcctDetailServices(@RequestParam("id") String id) throws InterruptedException {
-        Thread.sleep((long)(Math.random() * 10000));
+        Thread.sleep((long)(Math.random() * 5000));
         return acctDetailServices.getAcctDetailServices(id);
     }
     @GetMapping("/balance")
     String getAccountBalances(@RequestParam("id") String id) throws InterruptedException {
-        Thread.sleep((long)(Math.random() * 10000));
+        Thread.sleep((long)(Math.random() * 5000));
         return acctDetailServices.getAccountBalances(id);
 
     }

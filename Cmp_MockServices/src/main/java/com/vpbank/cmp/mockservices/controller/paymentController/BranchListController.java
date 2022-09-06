@@ -17,7 +17,7 @@ public class BranchListController {
 
     @GetMapping
     String getBranchListServices(@RequestParam("bankID") String id) throws InterruptedException {
-        Thread.sleep((long)(Math.random() * 10000));
+        Thread.sleep((long)(Math.random() * 5000));
         return branchListServices.getBranchListServices(id);
     }
 

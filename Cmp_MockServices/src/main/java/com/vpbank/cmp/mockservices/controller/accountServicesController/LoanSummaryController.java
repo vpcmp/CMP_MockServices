@@ -17,7 +17,7 @@ public class LoanSummaryController {
 
     @GetMapping
     String getLoanSummaryServices(@RequestParam("cif") String cif) throws InterruptedException {
-        Thread.sleep((long)(Math.random() * 10000));
+        Thread.sleep((long)(Math.random() * 5000));
         return loanSummaryServices.getLoanSummaryServices(cif);
     }
 

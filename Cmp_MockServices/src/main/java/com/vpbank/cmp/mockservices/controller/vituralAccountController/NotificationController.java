@@ -19,7 +19,7 @@ public class NotificationController {
 
     @PostMapping
     String notificationservices(@ModelAttribute Notification notification) throws InterruptedException {
-        Thread.sleep((long)(Math.random() * 10000));
+        Thread.sleep((long)(Math.random() * 5000));
         return notificationServices.notificationServices();
 
     };

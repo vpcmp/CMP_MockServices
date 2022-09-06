@@ -8,7 +8,6 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.Map;
 
-
 @Slf4j
 @RestController
 @RequestMapping(path="/corporate/liquidity/v1/backDateTrans")
@@ -18,7 +17,7 @@ public class BackdateTransactionController {
     private final BackdateTransactionServices backdateTransactionServices;
     @PostMapping
     String backdate(@ModelAttribute BackdateTransaction backdateTransaction, @RequestHeader Map<String, String> headers) throws InterruptedException {
-        Thread.sleep((long)(Math.random() * 10000));
+        Thread.sleep((long)(Math.random() * 5000));
         headers.forEach((key, value) -> {log.info(String.format("Header '%s' = %s", key, value));
         });
         return backdateTransactionServices.backdateTransactionServices();

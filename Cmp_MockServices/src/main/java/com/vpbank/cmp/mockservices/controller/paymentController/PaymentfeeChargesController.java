@@ -15,7 +15,7 @@ public class PaymentfeeChargesController {
 
     @PostMapping
     String getpaymentfeeChargesServices(@ModelAttribute PaymentfeeCharges paymentfeeCharges) throws InterruptedException {
-        Thread.sleep((long)(Math.random() * 10000));
+        Thread.sleep((long)(Math.random() * 5000));
         return getPaymentfeeChargesServices.getpaymentfeeChargesServices();
 
     };

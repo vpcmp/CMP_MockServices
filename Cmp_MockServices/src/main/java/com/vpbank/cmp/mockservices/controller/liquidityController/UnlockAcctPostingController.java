@@ -21,7 +21,7 @@ public class UnlockAcctPostingController {
     @PostMapping
 
     String acctPosting(@ModelAttribute UnlockAcctPosting unlockAcctPosting, @RequestHeader Map<String, String> headers) throws InterruptedException {
-        Thread.sleep((long)(Math.random() * 10000));
+        Thread.sleep((long)(Math.random() * 5000));
         headers.forEach((key, value) -> {log.info(String.format("Header '%s' = %s", key, value));
         });
         return unlockAcctPostingServices.unlockAcctPostingServices();

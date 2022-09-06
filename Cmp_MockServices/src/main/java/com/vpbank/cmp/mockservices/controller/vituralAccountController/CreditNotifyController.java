@@ -17,7 +17,7 @@ public class CreditNotifyController {
 
     @PostMapping
     String creditnotify(@ModelAttribute CreditNotify creditNotify) throws InterruptedException {
-        Thread.sleep((long)(Math.random() * 10000));
+        Thread.sleep((long)(Math.random() * 5000));
         return creditNotifyServices.creditNotifyServices();
 
     };

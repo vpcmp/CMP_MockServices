@@ -1,4 +1,3 @@
-//Customer On-Boarding - Account Information Interface  (Casa, Loan and Deposit)
 package com.vpbank.cmp.mockservices.controller.customerOnboardingController;
 
 import lombok.RequiredArgsConstructor;
@@ -19,7 +18,7 @@ public class AcctInformationController {
     String getAcctInformationService(
             @RequestParam("cif") String cif,
             @RequestParam(value = "types", required = false) String types) throws InterruptedException {
-        Thread.sleep((long)(Math.random() * 10000));
+        Thread.sleep((long)(Math.random() * 5000));
         return acctInformationServices.getAcctInformationService(cif,types);
     }
 

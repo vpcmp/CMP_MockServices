@@ -16,7 +16,7 @@ public class LoanStatementController {
 
     @GetMapping
     String getLoanStatementServices(@RequestParam("id") String id) throws InterruptedException {
-        Thread.sleep((long)(Math.random() * 10000));
+        Thread.sleep((long)(Math.random() * 5000));
         return loanStatementServices.getLoanStatementServices(id);
     }
 }

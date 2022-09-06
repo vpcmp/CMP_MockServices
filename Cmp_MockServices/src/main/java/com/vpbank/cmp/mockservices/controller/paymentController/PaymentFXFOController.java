@@ -18,7 +18,7 @@ public class PaymentFXFOController {
 
     @PostMapping
     String getpaymentFXFOServices(@ModelAttribute PaymentFXFO paymentFXFO) throws InterruptedException {
-        Thread.sleep((long)(Math.random() * 10000));
+        Thread.sleep((long)(Math.random() * 5000));
         return getpaymentFXFOServices.getpaymentFXFOServices();
 
     };

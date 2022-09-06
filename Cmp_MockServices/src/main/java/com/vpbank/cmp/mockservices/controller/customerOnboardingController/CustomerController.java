@@ -1,5 +1,3 @@
-//Customer On-Boarding - Customer Information Interface
-
 package com.vpbank.cmp.mockservices.controller.customerOnboardingController;
 
 import com.vpbank.cmp.mockservices.service.customerOnboardingServices.CustomerService;
@@ -18,7 +16,7 @@ public class CustomerController {
 
     @GetMapping
     String getCustomerInfo(@RequestParam("cif") String cif) throws InterruptedException {
-        Thread.sleep((long)(Math.random() * 10000));
+        Thread.sleep((long)(Math.random() * 5000));
         return customerService.getCustomerInfo(cif);
     }
 }
