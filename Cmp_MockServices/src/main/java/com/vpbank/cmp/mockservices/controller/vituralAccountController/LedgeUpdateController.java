@@ -1,6 +1,7 @@
 package com.vpbank.cmp.mockservices.controller.vituralAccountController;
 
 import com.vpbank.cmp.mockservices.model.LedgeUpdate;
+import com.vpbank.cmp.mockservices.service.Common;
 import com.vpbank.cmp.mockservices.service.vituralAccountServices.LedgeUpdateServices;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.ModelAttribute;
@@ -17,7 +18,7 @@ public class LedgeUpdateController {
 
     @PostMapping
     String ledgeUpdate(@ModelAttribute LedgeUpdate ledgeUpdate) throws InterruptedException {
-        Thread.sleep((long)(Math.random() * 5000));
+        Common.getDelay();
         return ledgeUpdateServices.ledgeUpdateServices();
 
     };

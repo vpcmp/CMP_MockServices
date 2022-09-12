@@ -1,6 +1,7 @@
 package com.vpbank.cmp.mockservices.controller.smartOTPController;
 
 import com.vpbank.cmp.mockservices.model.SmartOTPgetActivationCode;
+import com.vpbank.cmp.mockservices.service.Common;
 import com.vpbank.cmp.mockservices.service.smartOTPServices.SmartOTPgetActivationCodeServices;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.ModelAttribute;
@@ -17,7 +18,7 @@ public class SmartOTPgetActivationCodeController {
 
     @PostMapping
     String getsmartOTPgetActivationCode(@ModelAttribute SmartOTPgetActivationCode smartOTPgetActivationCode) throws InterruptedException {
-        Thread.sleep((long)(Math.random() * 5000));
+        Common.getDelay();
         return getsmartOTPgetActivationCodeServices.getsmartOTPgetActivationCodeServices();
 
     };

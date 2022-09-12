@@ -2,6 +2,7 @@
 package com.vpbank.cmp.mockservices.controller.customerOnboardingController;
 
 
+import com.vpbank.cmp.mockservices.service.Common;
 import com.vpbank.cmp.mockservices.service.customerOnboardingServices.CreditCardInformationServices;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -18,7 +19,7 @@ public class CreditCardInformationController {
 
     @GetMapping
     String getCreditCardInformationServices(@RequestParam("id") String id) throws InterruptedException {
-        Thread.sleep((long)(Math.random() * 5000));
+        Common.getDelay();
         return creditCardInformationServices.getCreditCardInformationServices(id);
     }
 

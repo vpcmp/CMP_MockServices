@@ -1,5 +1,6 @@
 package com.vpbank.cmp.mockservices.controller.accountServicesController;
 
+import com.vpbank.cmp.mockservices.service.Common;
 import com.vpbank.cmp.mockservices.service.accountServices.DepositSummaryServices;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -17,7 +18,7 @@ public class DepositSummaryController {
     String getDepositSummaryServices(
             @RequestParam(value = "cif", required = true) String cif,
             @RequestParam(value = "types", required = true) String types) throws  InterruptedException{
-        Thread.sleep((long)(Math.random() * 5000));
+        Common.getDelay();
         return depositSummaryServices.getDepositSummaryServices(cif, types);
     }
 }

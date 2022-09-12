@@ -1,6 +1,7 @@
 package com.vpbank.cmp.mockservices.controller.smartOTPController;
 
 import com.vpbank.cmp.mockservices.model.VerifyOTPAdvance;
+import com.vpbank.cmp.mockservices.service.Common;
 import com.vpbank.cmp.mockservices.service.smartOTPServices.VerifyOTPAdvanceServices;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
@@ -14,7 +15,7 @@ public class VerifyOTPAdvanceController {
 
     @PostMapping
     String getOTPadvance(@ModelAttribute VerifyOTPAdvance verifyOTPAdvance) throws InterruptedException {
-        Thread.sleep((long)(Math.random() * 10000));
+        Common.getDelay();
         return verifyOTPAdvanceServices.verifyOTPAdvanceServices();
 
     };

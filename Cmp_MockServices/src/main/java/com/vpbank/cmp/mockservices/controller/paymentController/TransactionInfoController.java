@@ -1,5 +1,6 @@
 package com.vpbank.cmp.mockservices.controller.paymentController;
 
+import com.vpbank.cmp.mockservices.service.Common;
 import com.vpbank.cmp.mockservices.service.paymentServices.TransactionInfoServices;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -17,7 +18,7 @@ public class TransactionInfoController {
     @GetMapping
     String getTransactionInfoServices(@RequestParam("debitAccount") String debAcc,
                                       @RequestParam("refNo") String refNo) throws InterruptedException {
-        Thread.sleep((long)(Math.random() * 10000));
+        Common.getDelay();
         return transactionInfoServices.getTransactionInfoServices(debAcc, refNo);
     }
 

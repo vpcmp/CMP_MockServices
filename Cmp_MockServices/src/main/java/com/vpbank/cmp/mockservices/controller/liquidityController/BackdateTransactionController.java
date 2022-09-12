@@ -1,6 +1,7 @@
 package com.vpbank.cmp.mockservices.controller.liquidityController;
 
 import com.vpbank.cmp.mockservices.model.BackdateTransaction;
+import com.vpbank.cmp.mockservices.service.Common;
 import com.vpbank.cmp.mockservices.service.liquidityServices.BackdateTransactionServices;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -17,7 +18,7 @@ public class BackdateTransactionController {
     private final BackdateTransactionServices backdateTransactionServices;
     @PostMapping
     String backdate(@ModelAttribute BackdateTransaction backdateTransaction, @RequestHeader Map<String, String> headers) throws InterruptedException {
-        Thread.sleep((long)(Math.random() * 5000));
+        Common.getDelay();
         headers.forEach((key, value) -> {log.info(String.format("Header '%s' = %s", key, value));
         });
         return backdateTransactionServices.backdateTransactionServices();

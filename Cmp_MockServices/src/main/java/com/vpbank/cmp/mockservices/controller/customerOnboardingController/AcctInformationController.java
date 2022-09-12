@@ -1,5 +1,6 @@
 package com.vpbank.cmp.mockservices.controller.customerOnboardingController;
 
+import com.vpbank.cmp.mockservices.service.Common;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -18,7 +19,7 @@ public class AcctInformationController {
     String getAcctInformationService(
             @RequestParam("cif") String cif,
             @RequestParam(value = "types", required = false) String types) throws InterruptedException {
-        Thread.sleep((long)(Math.random() * 5000));
+        Common.getDelay();
         return acctInformationServices.getAcctInformationService(cif,types);
     }
 

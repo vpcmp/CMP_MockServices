@@ -1,6 +1,7 @@
 package com.vpbank.cmp.mockservices.controller.paymentController;
 
 import com.vpbank.cmp.mockservices.model.PaymentInternaltransfer;
+import com.vpbank.cmp.mockservices.service.Common;
 import com.vpbank.cmp.mockservices.service.paymentServices.PaymentInternaltransferServices;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.ModelAttribute;
@@ -17,7 +18,7 @@ public class PaymentInternaltransferController {
 
     @PostMapping
     String getpaymentInternaltransfer(@ModelAttribute PaymentInternaltransfer paymentInternaltransfer) throws InterruptedException {
-        Thread.sleep((long)(Math.random() * 10000));
+        Common.getDelay();
         return getpaymentInternaltransferServices.getpaymentInternaltransferServices();
 
     }

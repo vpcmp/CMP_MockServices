@@ -1,5 +1,6 @@
 package com.vpbank.cmp.mockservices.controller.accountServicesController;
 
+import com.vpbank.cmp.mockservices.service.Common;
 import com.vpbank.cmp.mockservices.service.accountServices.CreditAdviceServices;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -16,7 +17,7 @@ public class CreditAdviceController {
 
     @GetMapping
     String getCreditAdviceServices(@RequestParam("id") String id) throws InterruptedException {
-        Thread.sleep((long)(Math.random() * 5000));
+        Common.getDelay();
         return creditAdviceServices.getCreditAdviceServices(id);
     }
 }

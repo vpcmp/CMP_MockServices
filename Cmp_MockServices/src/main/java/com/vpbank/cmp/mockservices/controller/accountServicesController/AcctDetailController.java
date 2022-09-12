@@ -1,5 +1,6 @@
 package com.vpbank.cmp.mockservices.controller.accountServicesController;
 
+import com.vpbank.cmp.mockservices.service.Common;
 import com.vpbank.cmp.mockservices.service.accountServices.AcctDetailServices;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -16,12 +17,12 @@ public class AcctDetailController {
 
     @GetMapping("/ca")
     String getAcctDetailServices(@RequestParam("id") String id) throws InterruptedException {
-        Thread.sleep((long)(Math.random() * 5000));
+        Common.getDelay();
         return acctDetailServices.getAcctDetailServices(id);
     }
     @GetMapping("/balance")
     String getAccountBalances(@RequestParam("id") String id) throws InterruptedException {
-        Thread.sleep((long)(Math.random() * 5000));
+        Common.getDelay();
         return acctDetailServices.getAccountBalances(id);
 
     }

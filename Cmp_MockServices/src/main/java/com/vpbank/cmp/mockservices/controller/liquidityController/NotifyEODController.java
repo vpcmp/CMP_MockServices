@@ -1,6 +1,7 @@
 package com.vpbank.cmp.mockservices.controller.liquidityController;
 
 import com.vpbank.cmp.mockservices.model.NotifyEOD;
+import com.vpbank.cmp.mockservices.service.Common;
 import com.vpbank.cmp.mockservices.service.liquidityServices.NotifyEODServices;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.ModelAttribute;
@@ -16,7 +17,7 @@ public class NotifyEODController {
 
     @PostMapping
     String acctPosting(@ModelAttribute NotifyEOD NotifyEOD) throws InterruptedException {
-        Thread.sleep((long)(Math.random() * 5000));
+        Common.getDelay();
         return notifyEODServices.notifyEODServices();
 
     };

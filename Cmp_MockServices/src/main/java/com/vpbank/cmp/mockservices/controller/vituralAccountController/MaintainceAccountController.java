@@ -2,6 +2,7 @@ package com.vpbank.cmp.mockservices.controller.vituralAccountController;
 
 import com.vpbank.cmp.mockservices.model.ClosureAccount;
 import com.vpbank.cmp.mockservices.model.MaintainceAccount;
+import com.vpbank.cmp.mockservices.service.Common;
 import com.vpbank.cmp.mockservices.service.vituralAccountServices.ClosureAccountServices;
 import com.vpbank.cmp.mockservices.service.vituralAccountServices.MaintainceAccountServices;
 import lombok.RequiredArgsConstructor;
@@ -19,7 +20,7 @@ public class MaintainceAccountController {
 
     @PostMapping
     String maintainceaccount(@ModelAttribute MaintainceAccount maintainceAccount) throws InterruptedException {
-        Thread.sleep((long)(Math.random() * 5000));
+        Common.getDelay();
         return maintainceAccountServices.maintainceAccountServices();
 
     };

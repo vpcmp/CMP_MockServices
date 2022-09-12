@@ -1,0 +1,22 @@
+account-list:
+  Account-balances:
+    - customerCode: 999999
+      accountNumber: 168769
+      openBalance: 11720455985
+      closeBalance: 11720450702
+      lockAmount: 0
+    - customerCode: 12345
+      accountNumber: 34281
+      openBalance: 11720455986
+      closeBalance: 11720450703
+      lockAmount: 0
+    - customerCode: 76999
+      accountNumber: 876890
+      openBalance: 117204559654
+      closeBalance: 11720450454
+      lockAmount: 0
+    - customerCode: 76996
+      accountNumber: 876897
+      openBalance: 117204559654
+      closeBalance: 11720450454
+      lockAmount: 0

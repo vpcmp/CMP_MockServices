@@ -1,6 +1,7 @@
 //Account Summary Interface
 package com.vpbank.cmp.mockservices.controller.paymentController;
 
+import com.vpbank.cmp.mockservices.service.Common;
 import com.vpbank.cmp.mockservices.service.paymentServices.BeneficiaryInfoServices;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -17,7 +18,7 @@ public class BeneficiaryInfoController {
 
     @GetMapping
     String getBeneficiaryInfoServices(@RequestParam("benType") String benType) throws InterruptedException {
-        Thread.sleep((long)(Math.random() * 5000));
+        Common.getDelay();
         return beneficiaryInfoServices.getBeneficiaryInfoServices(benType);
     }
 

@@ -1,6 +1,7 @@
 package com.vpbank.cmp.mockservices.controller.paymentController;
 
 import com.vpbank.cmp.mockservices.model.PaymentMT103;
+import com.vpbank.cmp.mockservices.service.Common;
 import com.vpbank.cmp.mockservices.service.paymentServices.PaymentMT103Services;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.ModelAttribute;
@@ -17,7 +18,7 @@ public class PaymentMT103Controller {
 
     @PostMapping
     String getPaymentMT103(@ModelAttribute PaymentMT103 paymentmt103) throws InterruptedException {
-        Thread.sleep((long)(Math.random() * 5000));
+        Common.getDelay();
         return getpaymentmt103Services.getpaymentmt103Services();
 
     };
