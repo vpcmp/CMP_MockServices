@@ -14,7 +14,7 @@ public class LockAcctPostingController {
 
     @PostMapping
     String acctPosting(@ModelAttribute LockAcctPosting lockAcctPosting) throws InterruptedException {
-        Common.getDelay();
+        Common.Delay();
         return lockAcctPostingServices.lockAcctPostingServices();
 
     };

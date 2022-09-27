@@ -18,7 +18,7 @@ public class BranchListController {
 
     @GetMapping
     String getBranchListServices(@RequestParam("bankID") String id) throws InterruptedException {
-        Common.getDelay();
+        Common.Delay();
         return branchListServices.getBranchListServices(id);
     }
 

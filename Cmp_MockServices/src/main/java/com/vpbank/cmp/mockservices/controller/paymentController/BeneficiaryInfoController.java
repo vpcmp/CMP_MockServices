@@ -18,7 +18,7 @@ public class BeneficiaryInfoController {
 
     @GetMapping
     String getBeneficiaryInfoServices(@RequestParam("benType") String benType) throws InterruptedException {
-        Common.getDelay();
+        Common.Delay();
         return beneficiaryInfoServices.getBeneficiaryInfoServices(benType);
     }
 

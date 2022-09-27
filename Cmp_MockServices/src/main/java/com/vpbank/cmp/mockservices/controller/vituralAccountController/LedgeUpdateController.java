@@ -4,10 +4,7 @@ import com.vpbank.cmp.mockservices.model.LedgeUpdate;
 import com.vpbank.cmp.mockservices.service.Common;
 import com.vpbank.cmp.mockservices.service.vituralAccountServices.LedgeUpdateServices;
 import lombok.RequiredArgsConstructor;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping(path="/corporate/virtual-account/v1/virtual-account/ledge/update")
@@ -16,9 +13,9 @@ public class LedgeUpdateController {
 
     private final LedgeUpdateServices ledgeUpdateServices;
 
-    @PostMapping
+    @PutMapping
     String ledgeUpdate(@ModelAttribute LedgeUpdate ledgeUpdate) throws InterruptedException {
-        Common.getDelay();
+        Common.Delay();
         return ledgeUpdateServices.ledgeUpdateServices();
 
     };

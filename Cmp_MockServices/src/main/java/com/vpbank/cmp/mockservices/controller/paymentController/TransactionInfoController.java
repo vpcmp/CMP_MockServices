@@ -18,7 +18,7 @@ public class TransactionInfoController {
     @GetMapping
     String getTransactionInfoServices(@RequestParam("debitAccount") String debAcc,
                                       @RequestParam("refNo") String refNo) throws InterruptedException {
-        Common.getDelay();
+        Common.Delay();
         return transactionInfoServices.getTransactionInfoServices(debAcc, refNo);
     }
 

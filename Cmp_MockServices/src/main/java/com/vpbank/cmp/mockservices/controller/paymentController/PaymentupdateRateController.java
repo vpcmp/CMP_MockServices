@@ -18,7 +18,7 @@ public class PaymentupdateRateController {
 
     @PostMapping
     String getpaymentupdateRate(@ModelAttribute PaymentupdateRate paymentupdateRate) throws InterruptedException {
-        Common.getDelay();
+        Common.Delay();
         return getpaymentupdateRateServices.getpaymentupdateRateServices();
 
     };

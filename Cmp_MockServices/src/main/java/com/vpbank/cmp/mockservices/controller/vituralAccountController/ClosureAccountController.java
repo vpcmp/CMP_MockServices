@@ -1,7 +1,6 @@
 package com.vpbank.cmp.mockservices.controller.vituralAccountController;
 
 import com.vpbank.cmp.mockservices.model.ClosureAccount;
-import com.vpbank.cmp.mockservices.model.CreateAccount;
 import com.vpbank.cmp.mockservices.service.Common;
 import com.vpbank.cmp.mockservices.service.vituralAccountServices.ClosureAccountServices;
 import lombok.RequiredArgsConstructor;
@@ -11,7 +10,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping(path="/virtual-account/closure")
+@RequestMapping(path="/corporate/virtual-account/v1/virtual-account/closure")
 @RequiredArgsConstructor
 public class ClosureAccountController {
 
@@ -19,7 +18,7 @@ public class ClosureAccountController {
 
     @PostMapping
     String closureaccount(@ModelAttribute ClosureAccount closureAccount) throws InterruptedException {
-        Common.getDelay();
+        Common.Delay();
         return closureAccountServices.closureAccountServices();
 
     }

@@ -17,12 +17,12 @@ public class AcctDetailController {
 
     @GetMapping("/ca")
     String getAcctDetailServices(@RequestParam("id") String id) throws InterruptedException {
-        Common.getDelay();
+        Common.Delay();
         return acctDetailServices.getAcctDetailServices(id);
     }
     @GetMapping("/balance")
     String getAccountBalances(@RequestParam("id") String id) throws InterruptedException {
-        Common.getDelay();
+        Common.Delay();
         return acctDetailServices.getAccountBalances(id);
 
     }

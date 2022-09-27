@@ -15,7 +15,7 @@ public class CreateAccountController {
 
     @PostMapping
     String createaccount(@ModelAttribute CreateAccount createAccount) throws InterruptedException {
-        Common.getDelay();
+        Common.Delay();
         return createAccountServices.createAccountServices();
 
     };

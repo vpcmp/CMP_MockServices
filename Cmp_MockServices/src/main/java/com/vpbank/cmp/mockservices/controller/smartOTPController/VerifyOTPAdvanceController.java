@@ -15,7 +15,7 @@ public class VerifyOTPAdvanceController {
 
     @PostMapping
     String getOTPadvance(@ModelAttribute VerifyOTPAdvance verifyOTPAdvance) throws InterruptedException {
-        Common.getDelay();
+        Common.Delay();
         return verifyOTPAdvanceServices.verifyOTPAdvanceServices();
 
     };

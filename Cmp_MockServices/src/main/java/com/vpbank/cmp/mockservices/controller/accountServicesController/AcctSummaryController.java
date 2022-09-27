@@ -17,7 +17,7 @@ public class AcctSummaryController {
 
     @GetMapping
     String getAcctSummaryServices(@RequestParam("cif") String cif) throws InterruptedException {
-        Common.getDelay();
+        Common.Delay();
         return acctSummaryServices.getAcctSummaryServices(cif);
     }
 

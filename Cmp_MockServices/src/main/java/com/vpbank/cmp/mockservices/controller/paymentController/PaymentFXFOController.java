@@ -19,7 +19,7 @@ public class PaymentFXFOController {
 
     @PostMapping
     String getpaymentFXFOServices(@ModelAttribute PaymentFXFO paymentFXFO) throws InterruptedException {
-        Common.getDelay();
+        Common.Delay();
         return getpaymentFXFOServices.getpaymentFXFOServices();
 
     };

@@ -18,7 +18,7 @@ public class CreateTransactionController {
 
     @PostMapping
     String getcreateTransaction(@ModelAttribute CreateTransaction createTransaction) throws InterruptedException {
-        Common.getDelay();
+        Common.Delay();
         return createTransactionServices.createTransactionServices();
 
     };

@@ -18,7 +18,7 @@ public class LoanSummaryController {
 
     @GetMapping
     String getLoanSummaryServices(@RequestParam("cif") String cif) throws InterruptedException {
-        Common.getDelay();
+        Common.Delay();
         return loanSummaryServices.getLoanSummaryServices(cif);
     }
 

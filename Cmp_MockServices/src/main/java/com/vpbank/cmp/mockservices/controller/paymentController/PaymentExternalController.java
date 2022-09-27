@@ -19,7 +19,7 @@ public class PaymentExternalController {
 
     @PostMapping
     String getpaymentExternal(@ModelAttribute PaymentExternal paymentExternal) throws InterruptedException {
-        Common.getDelay();
+        Common.Delay();
         return getpaymentExternalServices.getpaymentExternalServices();
 
     };

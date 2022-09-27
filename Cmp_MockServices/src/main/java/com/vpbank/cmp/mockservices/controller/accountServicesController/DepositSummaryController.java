@@ -18,7 +18,7 @@ public class DepositSummaryController {
     String getDepositSummaryServices(
             @RequestParam(value = "cif", required = true) String cif,
             @RequestParam(value = "types", required = true) String types) throws  InterruptedException{
-        Common.getDelay();
+        Common.Delay();
         return depositSummaryServices.getDepositSummaryServices(cif, types);
     }
 }

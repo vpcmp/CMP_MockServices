@@ -17,7 +17,7 @@ public class CreditAdviceController {
 
     @GetMapping
     String getCreditAdviceServices(@RequestParam("id") String id) throws InterruptedException {
-        Common.getDelay();
+        Common.Delay();
         return creditAdviceServices.getCreditAdviceServices(id);
     }
 }

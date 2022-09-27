@@ -19,7 +19,7 @@ public class AcctInformationController {
     String getAcctInformationService(
             @RequestParam("cif") String cif,
             @RequestParam(value = "types", required = false) String types) throws InterruptedException {
-        Common.getDelay();
+        Common.Delay();
         return acctInformationServices.getAcctInformationService(cif,types);
     }
 

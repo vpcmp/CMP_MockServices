@@ -18,7 +18,7 @@ public class PaymentInternaltransferController {
 
     @PostMapping
     String getpaymentInternaltransfer(@ModelAttribute PaymentInternaltransfer paymentInternaltransfer) throws InterruptedException {
-        Common.getDelay();
+        Common.Delay();
         return getpaymentInternaltransferServices.getpaymentInternaltransferServices();
 
     }

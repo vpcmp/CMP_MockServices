@@ -17,7 +17,7 @@ public class LoanDetailController {
 
     @GetMapping
     String getLoanDetailServices(@RequestParam("id") String id) throws InterruptedException {
-        Common.getDelay();
+        Common.Delay();
         return loanDetailServices.getLoanDetailServices(id);
     }
 }

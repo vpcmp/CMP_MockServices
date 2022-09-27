@@ -18,7 +18,7 @@ public class PaymentMT103Controller {
 
     @PostMapping
     String getPaymentMT103(@ModelAttribute PaymentMT103 paymentmt103) throws InterruptedException {
-        Common.getDelay();
+        Common.Delay();
         return getpaymentmt103Services.getpaymentmt103Services();
 
     };

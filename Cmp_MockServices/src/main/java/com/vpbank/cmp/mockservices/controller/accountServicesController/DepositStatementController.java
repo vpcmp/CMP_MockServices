@@ -21,7 +21,7 @@ public class DepositStatementController {
             @RequestParam(value = "type", required = false) String type,
             @RequestParam(value = "frdate", required = false) String fDate,
             @RequestParam(value = "todate", required = false) String toDate) throws InterruptedException {
-        Common.getDelay();
+        Common.Delay();
         return depositStatementServices.getDepositStatementServices(id,type,fDate,toDate);
     }
 }

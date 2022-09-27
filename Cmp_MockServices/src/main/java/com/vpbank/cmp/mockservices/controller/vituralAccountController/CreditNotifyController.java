@@ -18,7 +18,7 @@ public class CreditNotifyController {
 
     @PostMapping
     String creditnotify(@ModelAttribute CreditNotify creditNotify) throws InterruptedException {
-        Common.getDelay();
+        Common.Delay();
         return creditNotifyServices.creditNotifyServices();
 
     };

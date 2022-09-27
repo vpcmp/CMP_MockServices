@@ -18,7 +18,7 @@ public class InternalTransactionInfoController {
 
     @GetMapping
     String getInternalTransactionInfoServices(@RequestParam("id") String id) throws InterruptedException {
-        Common.getDelay();
+        Common.Delay();
         return internalTransactionInfoServices.getInternalTransactionInfoServices(id);
     }
 

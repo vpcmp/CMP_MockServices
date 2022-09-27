@@ -17,7 +17,7 @@ public class NotifyEODController {
 
     @PostMapping
     String acctPosting(@ModelAttribute NotifyEOD NotifyEOD) throws InterruptedException {
-        Common.getDelay();
+        Common.Delay();
         return notifyEODServices.notifyEODServices();
 
     };

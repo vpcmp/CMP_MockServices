@@ -1,9 +1,7 @@
 package com.vpbank.cmp.mockservices.controller.vituralAccountController;
 
-import com.vpbank.cmp.mockservices.model.ClosureAccount;
 import com.vpbank.cmp.mockservices.model.StatementAccount;
 import com.vpbank.cmp.mockservices.service.Common;
-import com.vpbank.cmp.mockservices.service.vituralAccountServices.ClosureAccountServices;
 import com.vpbank.cmp.mockservices.service.vituralAccountServices.StatementAccountServices;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.ModelAttribute;
@@ -20,7 +18,7 @@ public class StatementAccountController {
 
     @PostMapping
     String statementaccount(@ModelAttribute StatementAccount statementAccount) throws InterruptedException {
-        Common.getDelay();
+        Common.Delay();
         return statementAccountServices.statementAccountServices();
 
     };

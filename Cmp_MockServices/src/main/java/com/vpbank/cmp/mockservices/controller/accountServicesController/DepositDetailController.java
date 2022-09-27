@@ -17,7 +17,7 @@ public class DepositDetailController {
 
     @GetMapping
     String getDepositDetailServices(@RequestParam("id") String id) throws InterruptedException {
-        Common.getDelay();
+        Common.Delay();
         return depositDetailServices.getDepositDetailServices(id);
     }
 }

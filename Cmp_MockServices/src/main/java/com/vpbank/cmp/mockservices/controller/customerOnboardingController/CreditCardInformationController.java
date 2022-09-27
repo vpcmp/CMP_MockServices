@@ -19,7 +19,7 @@ public class CreditCardInformationController {
 
     @GetMapping
     String getCreditCardInformationServices(@RequestParam("id") String id) throws InterruptedException {
-        Common.getDelay();
+        Common.Delay();
         return creditCardInformationServices.getCreditCardInformationServices(id);
     }
 

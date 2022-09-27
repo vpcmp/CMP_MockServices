@@ -18,7 +18,7 @@ public class SmartOTPgetActivationCodeController {
 
     @PostMapping
     String getsmartOTPgetActivationCode(@ModelAttribute SmartOTPgetActivationCode smartOTPgetActivationCode) throws InterruptedException {
-        Common.getDelay();
+        Common.Delay();
         return getsmartOTPgetActivationCodeServices.getsmartOTPgetActivationCodeServices();
 
     };

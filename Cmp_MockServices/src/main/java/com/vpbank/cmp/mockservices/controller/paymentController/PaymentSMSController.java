@@ -15,7 +15,7 @@ public class PaymentSMSController {
 
     @PostMapping
     String getPaymentSMSServices(@ModelAttribute PaymentSMS payment) throws InterruptedException {
-       Common.getDelay();
+       Common.Delay();
         return getpaymentsmsServices.getpaymentsmsServices();
 
     };

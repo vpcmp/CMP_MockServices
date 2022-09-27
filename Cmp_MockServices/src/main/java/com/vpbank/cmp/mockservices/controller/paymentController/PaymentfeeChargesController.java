@@ -16,7 +16,7 @@ public class PaymentfeeChargesController {
 
     @PostMapping
     String getpaymentfeeChargesServices(@ModelAttribute PaymentfeeCharges paymentfeeCharges) throws InterruptedException {
-        Common.getDelay();
+        Common.Delay();
         return getPaymentfeeChargesServices.getpaymentfeeChargesServices();
 
     };
