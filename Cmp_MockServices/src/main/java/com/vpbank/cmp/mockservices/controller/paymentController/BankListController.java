@@ -1,4 +1,3 @@
-//Account Summary Interface
 package com.vpbank.cmp.mockservices.controller.paymentController;
 
 import com.vpbank.cmp.mockservices.service.Common;

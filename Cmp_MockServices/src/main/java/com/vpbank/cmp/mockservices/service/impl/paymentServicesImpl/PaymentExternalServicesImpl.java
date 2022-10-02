@@ -9,9 +9,9 @@ public class PaymentExternalServicesImpl implements PaymentExternalServices {
     @Override
     public String getpaymentExternalServices() {
         return "{\n" +
-                "    \"resultCode\": \"200\",\n" +
-                "    \"resultMsg\": \"complete\",\n" +
-                "    \"transactionId\": \"FT21225KBB000003\",\n" +
+                "    \"referenceNumber\": \"2233444558899999412\",\n" +
+                "    \"transactionId\": \"FT21232BDAK00020\",\n" +
+                "    \"transferResult\": \"complete\",\n" +
                 "    \"status\": \"complete\"\n" +
                 "}";
     }

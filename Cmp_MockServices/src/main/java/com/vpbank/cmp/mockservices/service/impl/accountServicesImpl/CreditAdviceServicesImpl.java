@@ -8,38 +8,19 @@ public class CreditAdviceServicesImpl implements CreditAdviceServices{
     @Override
     public String getCreditAdviceServices(String id){
         return "{\n" +
-                "    \"advicesList\": [\n" +
-                "        {\n" +
-                "            \"transCode\": \"TT2209209977\",\n" +
-                "            \"currency\": \"\",\n" +
-                "            \"debitAcctNo\": \"\",\n" +
-                "            \"debitAcctName\": \"\",\n" +
-                "            \"debitAcctBank\": \"VPBANK\",\n" +
-                "            \"debitAcctBranch\": \"\",\n" +
-                "            \"creditAcctNo\": \"\",\n" +
-                "            \"creditAcctName\": \"\",\n" +
-                "            \"creditAcctBank\": \"VPBANK\",\n" +
-                "            \"creditAcctBranch\": \"\",\n" +
-                "            \"amountInNumber\": \"\",\n" +
-                "            \"amountInWord\": \"\",\n" +
-                "            \"transDetails\": \"\"\n" +
-                "        },\n" +
-                "        {\n" +
-                "            \"transCode\": \"TT2209209977\",\n" +
-                "            \"currency\": \"\",\n" +
-                "            \"debitAcctNo\": \"\",\n" +
-                "            \"debitAcctName\": \"\",\n" +
-                "            \"debitAcctBank\": \"VPBANK\",\n" +
-                "            \"debitAcctBranch\": \"\",\n" +
-                "            \"creditAcctNo\": \"\",\n" +
-                "            \"creditAcctName\": \"\",\n" +
-                "            \"creditAcctBank\": \"VPBANK\",\n" +
-                "            \"creditAcctBranch\": \"\",\n" +
-                "            \"amountInNumber\": \"\",\n" +
-                "            \"amountInWord\": \"\",\n" +
-                "            \"transDetails\": \"\"\n" +
-                "        }\n" +
-                "    ]\n" +
+                "    \"transCode\": \"FT21228423311762\",\n" +
+                "    \"currency\": \"VND\",\n" +
+                "    \"debitAcctNo\": \"\",\n" +
+                "    \"debitAcctName\": \"CHI THU HAI\",\n" +
+                "    \"debitAcctBank\": \"VPBANK\",\n" +
+                "    \"debitAcctBranch\": \"VPBANK AN GIANG\",\n" +
+                "    \"creditAcctNo\": \"\",\n" +
+                "    \"creditAcctName\": \"\",\n" +
+                "    \"creditAcctBank\": \"\",\n" +
+                "    \"creditAcctBranch\": \"\",\n" +
+                "    \"amountInNumber\": \"VND1000000\",\n" +
+                "    \"amountInWord\": \"\",\n" +
+                "    \"transDetails\": \"NA\"\n" +
                 "}";
     }
 }

@@ -12,7 +12,7 @@ public class PaymentMT103ServicesImpl implements PaymentMT103Services {
         return "{\n" +
                 "    \"resultCode\": \"200\",\n" +
                 "    \"resultMsg\": \"complete\",\n" +
-                "    \"transactionId\": \"FT21225KBB000003\",\n" +
+                "    \"transactionId\": \"FT21232HGM000001\",\n" +
                 "    \"status\": \"complete\"\n" +
                 "}";
     }

@@ -8,7 +8,11 @@ import org.springframework.stereotype.Service;
 public class NotifyEODServicesImpl implements NotifyEODServices {
     @Override
     public String notifyEODServices() {
-        return "{    \"referenceNumber\": 12,    \"transferResult\": '',    \"status\": \"complete\"}";
+        return "{\n" +
+                "  \"referenceNumber\": 12,\n" +
+                "  \"transferResult\": \"\",\n" +
+                "  \"status\": \"complete\"\n" +
+                "}";
     }
 
 }

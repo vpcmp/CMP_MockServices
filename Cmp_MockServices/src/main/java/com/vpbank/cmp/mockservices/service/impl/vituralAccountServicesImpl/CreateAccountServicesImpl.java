@@ -10,27 +10,16 @@ public class CreateAccountServicesImpl implements CreateAccountServices {
     @Override
     public String createAccountServices() {
         return "{\n" +
-                "\n" +
-                "    \"context\": {\n" +
-                "\n" +
-                "        \"interfaceId\": \"VANUMBERCREATE_E_VALIDATION\",\n" +
-                "\n" +
-                "        \"channelId\": \"API\",\n" +
-                "\n" +
-                "        \"bankEntityId\": \"IGTBVN\",\n" +
-                "\n" +
-                "        \"status\": \"SUCCESS\",\n" +
-                "\n" +
-                "        \"error\": \"\",\n" +
-                "\n" +
-                "        \"message\": \"\",\n" +
-                "\n" +
-                "        \"xrequestId\": \"VAM222300000004051\",\n" +
-                "\n" +
-                "        \"x_request_id\": \"VAM222300000004051\"\n" +
-                "\n" +
-                "    }\n" +
-                "\n" +
+                "  \"context\": {\n" +
+                "    \"interfaceId\": \"VANUMBERCREATE_E_VALIDATION\",\n" +
+                "    \"channelId\": \"API\",\n" +
+                "    \"bankEntityId\": \"IGTBVN\",\n" +
+                "    \"status\": \"SUCCESS\",\n" +
+                "    \"error\": \"\",\n" +
+                "    \"message\": \"\",\n" +
+                "    \"xrequestId\": \"VAM222300000004051\",\n" +
+                "    \"x_request_id\": \"VAM222300000004051\"\n" +
+                "  }\n" +
                 "}";
     }
 

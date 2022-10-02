@@ -1,7 +1,6 @@
 
 package com.vpbank.cmp.mockservices.service.impl.vituralAccountServicesImpl;
 
-import com.vpbank.cmp.mockservices.service.vituralAccountServices.ClosureAccountServices;
 import com.vpbank.cmp.mockservices.service.vituralAccountServices.StatementAccountServices;
 import org.springframework.stereotype.Service;
 

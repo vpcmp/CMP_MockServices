@@ -9,7 +9,8 @@ import org.springframework.stereotype.Service;
 public class PaymentInternaltransferImpl implements PaymentInternaltransferServices {
     @Override
     public String getpaymentInternaltransferServices() {
-        return "  {  \"referenceNumber\": \"C79725082203112219\",\n" +
+        return "{\n" +
+                "    \"referenceNumber\": \"C79725082203112219\",\n" +
                 "    \"transactionId\": \"FT21232579872806\",\n" +
                 "    \"transferResult\": \"complete\",\n" +
                 "    \"status\": \"complete\"\n" +
