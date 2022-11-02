@@ -1,6 +1,7 @@
 
 package com.vpbank.cmp.mockservices.service.impl.vituralAccountServicesImpl;
 
+import com.vpbank.cmp.mockservices.config.LogExecutionTime;
 import com.vpbank.cmp.mockservices.service.vituralAccountServices.CreditNotifyServices;
 import org.springframework.stereotype.Service;
 
@@ -8,6 +9,7 @@ import org.springframework.stereotype.Service;
 @Service
 public class CreditNotifyServicesImpl implements CreditNotifyServices {
     @Override
+    @LogExecutionTime
     public String creditNotifyServices() {
         return "{\n" +
                 "    \"context\": {\n" +

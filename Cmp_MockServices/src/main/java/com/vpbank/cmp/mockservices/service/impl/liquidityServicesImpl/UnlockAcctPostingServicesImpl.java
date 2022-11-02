@@ -1,5 +1,6 @@
 package com.vpbank.cmp.mockservices.service.impl.liquidityServicesImpl;
 
+import com.vpbank.cmp.mockservices.config.LogExecutionTime;
 import com.vpbank.cmp.mockservices.service.liquidityServices.UnlockAcctPostingServices;
 import org.springframework.stereotype.Service;
 
@@ -7,6 +8,7 @@ import org.springframework.stereotype.Service;
 @Service
 public class UnlockAcctPostingServicesImpl implements UnlockAcctPostingServices {
     @Override
+    @LogExecutionTime
     public String unlockAcctPostingServices() {
         return "{\n" +
                 "    \"referenceNumber\": null,\n" +

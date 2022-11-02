@@ -1,11 +1,13 @@
 package com.vpbank.cmp.mockservices.service.impl.accountServicesImpl;
 
+import com.vpbank.cmp.mockservices.config.LogExecutionTime;
 import com.vpbank.cmp.mockservices.service.accountServices.LoanSummaryServices;
 import org.springframework.stereotype.Service;
 
 @Service
 public class LoanSummaryServicesImpl implements LoanSummaryServices {
     @Override
+    @LogExecutionTime
     public String getLoanSummaryServices(String cif) {
         return "{\n" +
                 "    \"loanList\": [\n" +

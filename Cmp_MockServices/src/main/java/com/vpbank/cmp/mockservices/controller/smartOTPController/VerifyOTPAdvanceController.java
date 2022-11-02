@@ -7,13 +7,13 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-@RequestMapping(path="/cas/cashs/1.0/payments/sotp/verify")
+@RequestMapping(path="/cas/cashs/payments/sotp/verify")
 @RequiredArgsConstructor
 public class VerifyOTPAdvanceController {
 
     private final VerifyOTPAdvanceServices verifyOTPAdvanceServices;
 
-    @PostMapping
+    @PutMapping
     String getOTPadvance(@ModelAttribute VerifyOTPAdvance verifyOTPAdvance) throws InterruptedException {
         Common.Delay();
         return verifyOTPAdvanceServices.verifyOTPAdvanceServices();

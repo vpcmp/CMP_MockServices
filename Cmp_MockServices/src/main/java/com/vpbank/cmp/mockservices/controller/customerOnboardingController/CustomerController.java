@@ -16,8 +16,8 @@ public class CustomerController {
     private final CustomerService customerService;
 
     @GetMapping
-    String getCustomerInfo(@RequestParam("cif") String cif) throws InterruptedException {
+    String getCustomerInfo(@RequestParam("id") String id) throws InterruptedException {
         Common.Delay();
-        return customerService.getCustomerInfo(cif);
+        return customerService.getCustomerInfo(id);
     }
 }

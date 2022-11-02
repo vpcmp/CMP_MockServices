@@ -1,11 +1,13 @@
 package com.vpbank.cmp.mockservices.service.impl.customerOnboardingImpl;
 
+import com.vpbank.cmp.mockservices.config.LogExecutionTime;
 import com.vpbank.cmp.mockservices.service.customerOnboardingServices.CustomerService;
 import org.springframework.stereotype.Service;
 
 @Service
 public class CustomerServiceImpl implements CustomerService {
     @Override
+    @LogExecutionTime
     public String getCustomerInfo(String cif) {
         //TODO : return customerInfo
         /*CustomerInfo customerInfo = CustomerInfo.builder()

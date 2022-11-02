@@ -1,5 +1,6 @@
 package com.vpbank.cmp.mockservices.service.impl.customerOnboardingImpl;
 
+import com.vpbank.cmp.mockservices.config.LogExecutionTime;
 import com.vpbank.cmp.mockservices.service.customerOnboardingServices.AcctInformationServices;
 import org.springframework.stereotype.Service;
 
@@ -7,6 +8,7 @@ import org.springframework.stereotype.Service;
 @Service
 public class AcctInformationServicesImpl implements AcctInformationServices {
     @Override
+    @LogExecutionTime
     public String getAcctInformationService(String cif, String types) {
         if(types==null){
             return "{\n" +

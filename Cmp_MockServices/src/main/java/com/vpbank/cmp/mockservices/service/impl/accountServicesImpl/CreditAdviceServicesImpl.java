@@ -1,12 +1,14 @@
 package com.vpbank.cmp.mockservices.service.impl.accountServicesImpl;
 
+import com.vpbank.cmp.mockservices.config.LogExecutionTime;
 import com.vpbank.cmp.mockservices.service.accountServices.CreditAdviceServices;
 import org.springframework.stereotype.Service;
 
 @Service
 public class CreditAdviceServicesImpl implements CreditAdviceServices{
     @Override
-    public String getCreditAdviceServices(String id){
+    @LogExecutionTime
+    public String getCreditAdviceServices(String debitCreditFlag, String id){
         return "{\n" +
                 "    \"transCode\": \"FT21228423311762\",\n" +
                 "    \"currency\": \"VND\",\n" +

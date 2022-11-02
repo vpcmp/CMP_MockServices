@@ -1,5 +1,6 @@
 package com.vpbank.cmp.mockservices.service.impl.paymentServicesImpl;
 
+import com.vpbank.cmp.mockservices.config.LogExecutionTime;
 import com.vpbank.cmp.mockservices.service.paymentServices.InternalTransactionInfoServices;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
@@ -9,6 +10,7 @@ import org.springframework.stereotype.Service;
 @Slf4j
 public class InternalTransactionInfoServicesImpl implements InternalTransactionInfoServices {
     @Override
+    @LogExecutionTime
     public String getInternalTransactionInfoServices(String id) {
         return "{\n" +
                 "    \"customerNumber\": \"76829\",\n" +

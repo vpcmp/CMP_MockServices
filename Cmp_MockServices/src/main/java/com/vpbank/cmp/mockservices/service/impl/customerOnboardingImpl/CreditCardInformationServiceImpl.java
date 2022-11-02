@@ -1,11 +1,13 @@
 package com.vpbank.cmp.mockservices.service.impl.customerOnboardingImpl;
 
+import com.vpbank.cmp.mockservices.config.LogExecutionTime;
 import com.vpbank.cmp.mockservices.service.customerOnboardingServices.CreditCardInformationServices;
 import org.springframework.stereotype.Service;
 
 @Service
 public class CreditCardInformationServiceImpl implements CreditCardInformationServices {
     @Override
+    @LogExecutionTime
     public String getCreditCardInformationServices(String id) {
         return "{\n" +
                 "    \"cardList\": {\n" +

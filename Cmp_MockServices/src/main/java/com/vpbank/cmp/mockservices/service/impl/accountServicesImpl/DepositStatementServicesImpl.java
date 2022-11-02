@@ -1,11 +1,13 @@
 package com.vpbank.cmp.mockservices.service.impl.accountServicesImpl;
 
+import com.vpbank.cmp.mockservices.config.LogExecutionTime;
 import com.vpbank.cmp.mockservices.service.accountServices.DepositStatementServices;
 import org.springframework.stereotype.Service;
 
 @Service
 public class DepositStatementServicesImpl implements DepositStatementServices{
     @Override
+    @LogExecutionTime
     public String getDepositStatementServices(String id, String type, String fDate, String toDate){
         return "{\n" +
                 "    \"accountList\": [\n" +

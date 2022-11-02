@@ -16,8 +16,10 @@ public class CreditAdviceController {
     private final CreditAdviceServices creditAdviceServices;
 
     @GetMapping
-    String getCreditAdviceServices(@RequestParam("id") String id) throws InterruptedException {
+    String getCreditAdviceServices(
+            @RequestParam("debitCreditFlag")  String debitCreditFlag,
+            @RequestParam(value = "id", required = true ) String id) throws InterruptedException {
         Common.Delay();
-        return creditAdviceServices.getCreditAdviceServices(id);
+        return creditAdviceServices.getCreditAdviceServices(debitCreditFlag,id);
     }
 }

@@ -1,5 +1,6 @@
 package com.vpbank.cmp.mockservices.service.impl.paymentServicesImpl;
 
+import com.vpbank.cmp.mockservices.config.LogExecutionTime;
 import com.vpbank.cmp.mockservices.service.paymentServices.PaymentFXFOServices;
 import org.springframework.stereotype.Service;
 
@@ -8,6 +9,7 @@ import org.springframework.stereotype.Service;
 
 public class PaymentFXFOImpl implements PaymentFXFOServices {
     @Override
+    @LogExecutionTime
     public String getpaymentFXFOServices() {
         return "'{\n" +
                 "    \"rateList\": [\n" +

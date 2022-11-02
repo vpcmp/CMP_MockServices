@@ -1,11 +1,13 @@
 package com.vpbank.cmp.mockservices.service.impl.accountServicesImpl;
 
+import com.vpbank.cmp.mockservices.config.LogExecutionTime;
 import com.vpbank.cmp.mockservices.service.accountServices.DepositSummaryServices;
 import org.springframework.stereotype.Service;
 
 @Service
 public class DepositSummaryServiceImpl implements DepositSummaryServices{
     @Override
+    @LogExecutionTime
     public String getDepositSummaryServices(String cif, String types){
         return "{\n" +
                 "    \"products\": {\n" +

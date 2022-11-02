@@ -1,5 +1,6 @@
 package com.vpbank.cmp.mockservices.service.impl.paymentServicesImpl;
 
+import com.vpbank.cmp.mockservices.config.LogExecutionTime;
 import com.vpbank.cmp.mockservices.service.paymentServices.TransactionInfoServices;
 import org.springframework.stereotype.Service;
 
@@ -7,6 +8,7 @@ import org.springframework.stereotype.Service;
 @Service
 public class TransactionInfoServicesImpl implements TransactionInfoServices {
     @Override
+    @LogExecutionTime
     public String getTransactionInfoServices(String debAcc, String refNo) {
         return "{\n" +
                 "    \"transfers\": [\n" +

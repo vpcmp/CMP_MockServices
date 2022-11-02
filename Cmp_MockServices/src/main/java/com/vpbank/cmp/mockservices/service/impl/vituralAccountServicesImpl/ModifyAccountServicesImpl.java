@@ -1,6 +1,7 @@
 
 package com.vpbank.cmp.mockservices.service.impl.vituralAccountServicesImpl;
 
+import com.vpbank.cmp.mockservices.config.LogExecutionTime;
 import com.vpbank.cmp.mockservices.service.vituralAccountServices.ModifyAccountServices;
 import org.springframework.stereotype.Service;
 
@@ -8,6 +9,7 @@ import org.springframework.stereotype.Service;
 @Service
 public class ModifyAccountServicesImpl implements ModifyAccountServices {
     @Override
+    @LogExecutionTime
     public String modifyAccountServices() {
         return "{\n" +
                 "    \"context\": {\n" +

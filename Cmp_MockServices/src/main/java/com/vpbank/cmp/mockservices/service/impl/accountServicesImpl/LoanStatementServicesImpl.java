@@ -1,11 +1,13 @@
 package com.vpbank.cmp.mockservices.service.impl.accountServicesImpl;
 
+import com.vpbank.cmp.mockservices.config.LogExecutionTime;
 import com.vpbank.cmp.mockservices.service.accountServices.LoanStatementServices;
 import org.springframework.stereotype.Service;
 
 @Service
 public class LoanStatementServicesImpl implements LoanStatementServices{
     @Override
+    @LogExecutionTime
     public String getLoanStatementServices(String id){
         return "{\n" +
                 "  \"transactionList\": [\n" +

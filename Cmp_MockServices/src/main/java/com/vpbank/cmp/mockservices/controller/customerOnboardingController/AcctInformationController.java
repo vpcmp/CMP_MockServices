@@ -17,10 +17,10 @@ public class AcctInformationController {
 
     @GetMapping
     String getAcctInformationService(
-            @RequestParam("cif") String cif,
+            @RequestParam("id") String id,
             @RequestParam(value = "types", required = false) String types) throws InterruptedException {
         Common.Delay();
-        return acctInformationServices.getAcctInformationService(cif,types);
+        return acctInformationServices.getAcctInformationService(id,types);
     }
 
 }

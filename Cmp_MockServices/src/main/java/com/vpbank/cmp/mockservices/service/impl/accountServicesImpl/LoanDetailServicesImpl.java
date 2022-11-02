@@ -1,11 +1,13 @@
 package com.vpbank.cmp.mockservices.service.impl.accountServicesImpl;
 
+import com.vpbank.cmp.mockservices.config.LogExecutionTime;
 import com.vpbank.cmp.mockservices.service.accountServices.LoanDetailServices;
 import org.springframework.stereotype.Service;
 
 @Service
 public class LoanDetailServicesImpl implements LoanDetailServices{
     @Override
+    @LogExecutionTime
     public String getLoanDetailServices(String id){
         return "{\n" +
                 "    \"contractID\": \"LD1435200022\",\n" +

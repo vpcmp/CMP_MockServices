@@ -1,5 +1,6 @@
 package com.vpbank.cmp.mockservices.service.impl.paymentServicesImpl;
 
+import com.vpbank.cmp.mockservices.config.LogExecutionTime;
 import com.vpbank.cmp.mockservices.service.paymentServices.BankListServices;
 import org.springframework.stereotype.Service;
 
@@ -7,6 +8,7 @@ import org.springframework.stereotype.Service;
 @Service
 public class BankListServicesImpl implements BankListServices {
     @Override
+    @LogExecutionTime
     public String getBankListServices() {
         return "{\n" +
                 "    \"bankList\": [\n" +

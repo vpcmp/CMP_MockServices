@@ -1,5 +1,6 @@
 package com.vpbank.cmp.mockservices.service.impl.paymentServicesImpl;
 
+import com.vpbank.cmp.mockservices.config.LogExecutionTime;
 import com.vpbank.cmp.mockservices.service.paymentServices.PaymentfeeChargesServices;
 import org.springframework.stereotype.Service;
 
@@ -8,8 +9,9 @@ import org.springframework.stereotype.Service;
 
 public class PaymentfeeChargesImpl implements PaymentfeeChargesServices {
     @Override
+    @LogExecutionTime
     public String getpaymentfeeChargesServices() {
-        return "'{\n" +
+        return "{\n" +
                 "    \"transactionId\": \"CHG212219BFYP\"\n" +
                 "}";
     }
