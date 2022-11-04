@@ -19,7 +19,6 @@ import java.util.List;
 @Log4j2
 @RequiredArgsConstructor
 public class AcctDetailServicesImpl implements AcctDetailServices {
-    private final AccountBalancesConfig accountBalancesConfig;
     private final AccountDetailRepository accountDetailRepository;
 
     @Override
@@ -29,20 +28,6 @@ public class AcctDetailServicesImpl implements AcctDetailServices {
         return accountDetailEntity.getDetail();
     }
 
-    @Override
-    public String getAccountBalances(String id) {
-        try {
-            List<AccountBalance> accountBalances = accountBalancesConfig.getAccountBalances();
-            AccountBalance accountBalance = accountBalances.stream()
-                    .filter(balance -> balance.getAccountNumber().equals(id))
-                    .findFirst()
-                    .orElse(new AccountBalance());
-            ObjectWriter ow = new ObjectMapper().writer().withDefaultPrettyPrinter();
-            return ow.writeValueAsString(accountBalance);
-        } catch (Exception ex) {
-            log.error("Exception", ex);
-        }
-        return "";
-    }
+
 
 }

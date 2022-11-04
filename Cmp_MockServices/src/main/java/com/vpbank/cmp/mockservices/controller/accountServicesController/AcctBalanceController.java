@@ -1,7 +1,7 @@
 package com.vpbank.cmp.mockservices.controller.accountServicesController;
 
 import com.vpbank.cmp.mockservices.service.Common;
-import com.vpbank.cmp.mockservices.service.accountServices.AcctDetailServices;
+import com.vpbank.cmp.mockservices.service.accountServices.AcctBalanceServices;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -9,18 +9,16 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping(path="/cas/cashs/1.0/accounts")
+@RequestMapping(path="/cas/cashs/1.0/accounts/balance")
 @RequiredArgsConstructor
-public class AcctDetailController {
+public class AcctBalanceController {
 
-    private final AcctDetailServices acctDetailServices;
+    private final AcctBalanceServices acctBalanceServices;
 
-    @GetMapping("/ca")
-    String getAcctDetailServices(@RequestParam("id") String id) throws InterruptedException {
+    @GetMapping
+    String getAcctSummaryServices(@RequestParam("id") String id) throws InterruptedException {
         Common.Delay();
-        return acctDetailServices.getAcctDetailServices(id);
+        return acctBalanceServices.getAcctBalanceServices(id);
     }
 
-
-    }
-
+}
